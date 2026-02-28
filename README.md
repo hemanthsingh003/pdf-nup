@@ -10,8 +10,21 @@ A CLI tool to combine multiple PDF pages into a single page (n-up format).
 
 ## Installation
 
+### Quick Install (macOS/Linux/Windows)
+
 ```bash
-pip install -e pdf-nup/
+pipx install git+https://github.com/hemanthsingh003/pdf-nup.git
+```
+
+### Requirements
+
+- Python 3.10 or higher
+- [pipx](https://pipx.pypa.io/) (install via: `python -m pip install pipx`)
+
+### Uninstall
+
+```bash
+pipx uninstall pdf-nup
 ```
 
 ## Usage
