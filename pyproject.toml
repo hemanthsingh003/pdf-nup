@@ -1,0 +1,54 @@
+[project]
+name = "pdf-nup"
+version = "0.1.0"
+description = "CLI tool to combine multiple PDF pages into a single page"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Hemanth"}]
+keywords = ["pdf", "n-up", "cli", "pagination"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "pypdf>=3.0.0",
+    "reportlab>=4.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+pdf-nup = "pdf_nup.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
